@@ -1,10 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<form action="#" class="form-control form-control-sm" th:action="'new/add'" th:object="${job}"
+      method="post">
+    <!-- Custom Form Start -->
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header bg-secondary text-white">
+                    <a data-toggle="collapse" href="#collapse-example" aria-expanded="true"
+                       aria-controls="collapse-example" id="heading-example" class="d-block">
+                        <i class="fa fa-chevron-down pull-right"></i>
+                        Job Info
+                    </a>
+                </div>
+                <div id="collapse-example" class="collapse show"
+                     aria-labelledby="heading-example">
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <label for="description" class="col-2 col-form-label">Description</label>
+                            <div class="col-10">
+                                                        <textarea th:field="*{description}" class="form-control" type="text"
+                                                                  id="description"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="dateInput" class="col-2 col-form-label">Date</label>
+                            <div class="col-10">
+                                <input th:field="*{date}" class="form-control" type="date"
+                                       id="dateInput">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 </body>
 </html>

@@ -1,12 +1,10 @@
 package com.jay.crud1;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 //Table - User
 @Entity
+@Table(name="users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -33,6 +31,7 @@ public class User {
     public long getId() {
         return  id;
     }
+    public String getName() {return name;}
     public String getRole() {return role;}
     public String getEmail() {return email;}
 
